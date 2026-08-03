@@ -164,8 +164,8 @@ button, summary, a { -webkit-tap-highlight-color: transparent; }
   .mobile-menu { display: block; }
   .mobile-menu nav { position: fixed; top: calc(4.375rem + env(safe-area-inset-top, 0px)); padding-top: .75rem; }
   .hero {
-    min-height: calc(100vh - 4.375rem - env(safe-area-inset-top, 0px));
-    min-height: calc(100lvh - 4.375rem - env(safe-area-inset-top, 0px));
+    min-height: 100vh;
+    min-height: 100lvh;
     padding-top: 3.5rem;
   }
   .eyebrow { margin-bottom: 3.25rem; }

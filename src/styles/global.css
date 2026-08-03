@@ -75,9 +75,9 @@ button, summary, a { -webkit-tap-highlight-color: transparent; }
 .instagram-section { padding-block: clamp(4rem, 5vw, 5rem); background: var(--paper-deep); }
 .instagram-heading { width: min(calc(100% - clamp(3rem, 5vw, 4rem)), 1500px); display: flex; justify-content: space-between; align-items: end; gap: 2rem; margin-bottom: 2rem; }
 .instagram-heading h2 { margin: 0; font: normal clamp(2.6rem, 4vw, 4rem)/1.02 var(--serif); letter-spacing: -.035em; }
-.instagram-heading > a { width: 2rem; height: 2rem; display: grid; place-items: center; transition: opacity .2s ease; }
+.instagram-heading > a { width: clamp(2.5rem, 3.5vw, 3.25rem); height: clamp(2.5rem, 3.5vw, 3.25rem); display: grid; place-items: center; transition: opacity .2s ease; }
 .instagram-heading > a:hover { opacity: .62; }
-.instagram-heading > a svg { width: 1.65rem; height: 1.65rem; fill: none; stroke: currentColor; stroke-width: 1.5; }
+.instagram-heading > a svg { width: 76%; height: 76%; fill: none; stroke: currentColor; stroke-width: 1.5; }
 .instagram-heading > a .instagram-icon-dot { fill: currentColor; stroke: none; }
 .instagram-grid { width: min(calc(100% - clamp(3rem, 5vw, 4rem)), 1500px); margin-inline: auto; display: grid; grid-template-columns: repeat(12, 1fr); grid-template-rows: repeat(9, 1fr); gap: clamp(.5rem, 1.1vw, .9rem); aspect-ratio: 2.15 / 1; }
 .instagram-grid a { display: block; min-width: 0; min-height: 0; overflow: hidden; background: var(--brown); }

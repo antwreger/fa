@@ -24,6 +24,8 @@ export const site = {
 
 export const navigation = [
   { label: 'Sortiment', href: '#sortiment' },
+  { label: 'Antikviteter', href: '#antikviteter' },
+  { label: 'Smycken', href: '#antika-smycken' },
+  { label: 'Bijoux', href: '#vintage-bijoux' },
   { label: 'Om oss', href: '#om-oss' },
-  { label: 'Besök oss', href: '#besok' },
 ] as const;

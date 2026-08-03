@@ -1,0 +1,51 @@
+---
+import '../styles/global.css';
+import { site } from '../data/site';
+
+interface Props {
+  title?: string;
+}
+
+const { title = 'Fåfängans Antik – Antikhandel i Haga, Göteborg' } = Astro.props;
+const canonical = new URL(Astro.url.pathname, Astro.site);
+const structuredData = {
+  '@context': 'https://schema.org',
+  '@type': 'AntiqueStore',
+  name: site.name,
+  url: 'https://fafangansantik.se',
+  telephone: '+46 31 711 06 16',
+  address: {
+    '@type': 'PostalAddress',
+    streetAddress: site.address.street,
+    postalCode: '413 01',
+    addressLocality: 'Göteborg',
+    addressCountry: 'SE',
+  },
+  sameAs: [site.instagram.href],
+};
+---
+
+<!doctype html>
+<html lang="sv">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="description" content={site.description} />
+    <meta name="theme-color" content="#f2efe8" />
+    <link rel="canonical" href={canonical} />
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <meta property="og:type" content="website" />
+    <meta property="og:locale" content="sv_SE" />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={site.description} />
+    <meta property="og:url" content={canonical} />
+    <meta property="og:image" content={new URL('/og.svg', Astro.site)} />
+    <meta name="twitter:card" content="summary_large_image" />
+    <title>{title}</title>
+    <script is:inline type="application/ld+json" set:html={JSON.stringify(structuredData)} />
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Hoppa till innehåll</a>
+    <slot />
+  </body>
+</html>

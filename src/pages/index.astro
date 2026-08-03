@@ -1,0 +1,123 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Header from '../components/Header.astro';
+import Hero from '../components/Hero.astro';
+import Footer from '../components/Footer.astro';
+import { site } from '../data/site';
+import { getInstagramPosts } from '../lib/instagram';
+
+const instagramPosts = await getInstagramPosts(13);
+---
+
+<BaseLayout>
+  <div id="top"></div>
+  <Header />
+  <main id="main">
+    <Hero />
+
+    <section id="instagram" class="instagram-section section" aria-labelledby="instagram-title">
+      <div class="instagram-heading container">
+        <div>
+          <h2 id="instagram-title">Följ oss</h2>
+        </div>
+        <a href={site.instagram.href} target="_blank" rel="noreferrer">{site.instagram.label}</a>
+      </div>
+      <div class="instagram-grid">
+        {instagramPosts.map((post) => (
+          <a href={post.href} target="_blank" rel="noreferrer" aria-label="Se inlägget på Instagram">
+            <img src={post.src} alt={post.alt} width={post.width} height={post.height} loading="lazy" />
+          </a>
+        ))}
+      </div>
+    </section>
+
+    <section id="sortiment" class="assortment-section section" aria-labelledby="assortment-title">
+      <div class="container">
+        <div class="assortment-heading">
+          <h2 id="assortment-title">I butiken</h2>
+        </div>
+        <div class="assortment-categories">
+          <article class="assortment-item">
+            <figure class="assortment-image">
+              <img src="/dsc_0176-scaled.jpg" alt="Antikviteter i butiken" width="1920" height="1280" loading="lazy" />
+              <h3>Antikviteter</h3>
+            </figure>
+            <div class="assortment-copy">
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Praesent commodo cursus magna.</p>
+              <a class="assortment-link" href="#kontakt" aria-label="Läs mer om antikviteter">Läs mer</a>
+            </div>
+          </article>
+          <article class="assortment-item">
+            <figure class="assortment-image">
+              <img src="/dsc_0101-1-scaled.jpg" alt="Antika smycken i silver" width="1920" height="1280" loading="lazy" />
+              <h3>Antika smycken</h3>
+            </figure>
+            <div class="assortment-copy">
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean lacinia bibendum nulla sed consectetur. Maecenas faucibus mollis interdum.</p>
+              <a class="assortment-link" href="#kontakt" aria-label="Läs mer om antika smycken">Läs mer</a>
+            </div>
+          </article>
+          <article class="assortment-item">
+            <figure class="assortment-image">
+              <img src="/dsc_0150-scaled.jpg" alt="Vintage bijoux i butiken" width="1920" height="1280" loading="lazy" />
+              <h3>Vintage bijoux</h3>
+            </figure>
+            <div class="assortment-copy">
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer vitae justo eget magna fermentum posuere. Curabitur vel lectus sed erat ullamcorper suscipit.</p>
+              <a class="assortment-link" href="#kontakt" aria-label="Läs mer om vintage bijoux">Läs mer</a>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="om-oss" class="history section">
+      <div class="container history-grid">
+        <div class="history-copy">
+          <h2>Om Fåfängans Antik</h2>
+          <p>Klassiska antikviteter med karaktär och personlighet har alltid varit butikens ledord, liksom estetik och ting som lockar sinnena. I mer än tjugo år har vårt fokus varit att hitta de där alldeles speciella antikviteterna till butiken. Sedan 2007 har Fåfängans Antik också utvecklat ett unikt och välsorterat utbud av vintagesmycken och bijouterier från 1950-, 60- och 70-talen.</p>
+          <p>Bara ett fåtal butiker i Europa kan erbjuda ett lika stort utbud. Här finns allt från en solitär brosch till en klänning från 1920-talet, till strass och äkta pärlor för bal eller bröllop. Oavsett om man söker vintage för herrar eller damer är ambitionen att väcka nyfikenhet och överträffa förväntningarna. Välkommen till vår fantastiska värld!</p>
+          <p class="history-signature"><em>Mickael Appelkvist med personal</em></p>
+        </div>
+      </div>
+    </section>
+
+    <section id="besok" class="visit section" aria-labelledby="visit-title">
+      <div class="container">
+        <div class="visit-head">
+          <p class="section-kicker">Haga, Göteborg</p>
+          <h2 id="visit-title">Välkommen in.</h2>
+        </div>
+        <div class="visit-body">
+          <div class="visit-details">
+            <div class="visit-group">
+              <div class="visit-address">
+                <p class="detail-label">Adress</p>
+                <p>{site.name}<br />{site.address.street}<br />{site.address.postal}</p>
+              </div>
+              <div class="visit-hours">
+                <p class="detail-label">Öppettider</p>
+                {site.hours.map((row) => <p class="hours-row"><span>{row.days}</span><span>{row.time}</span></p>)}
+                <small>Söndag stängt</small>
+              </div>
+            </div>
+            <div class="visit-group">
+              <div class="visit-map">
+                <p class="detail-label">Hitta hit</p>
+                <a class="map-link" href={site.map} target="_blank" rel="noreferrer">Visa på karta</a>
+              </div>
+              <div id="kontakt" class="visit-contact">
+                <p class="detail-label">Kontakt</p>
+                <a href={site.phone.landlineHref}>{site.phone.landline}</a>
+                <a href={site.phone.mobileHref}>{site.phone.mobile}</a>
+                <p class="detail-label visit-follow-label">Följ oss</p>
+                <a class="visit-instagram" href={site.instagram.href} target="_blank" rel="noreferrer">{site.instagram.label}</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+  <Footer />
+</BaseLayout>

@@ -1,0 +1,17 @@
+---
+import { site } from '../data/site';
+const year = new Date().getFullYear();
+---
+
+<footer class="site-footer">
+  <div class="container footer-top">
+    <a href="#top" class="footer-brand" aria-label="Till sidans början">
+      <img src="/fa-logotyp-white.svg" width="473" height="117" alt="Fåfängans Antik" />
+    </a>
+  </div>
+  <div class="container footer-bottom">
+    <p>© {year} Fåfängans Antik</p>
+    <p>Built by A3b</p>
+    <a href={site.instagram.href} target="_blank" rel="noreferrer">Instagram</a>
+  </div>
+</footer>

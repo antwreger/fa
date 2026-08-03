@@ -1,0 +1,33 @@
+---
+import { navigation } from '../data/site';
+---
+
+<header class="site-header">
+  <div class="container header-inner">
+    <a class="brand" href="#top" aria-label="Fåfängans Antik – till sidans början">
+      <img src="/fa-logotyp.svg" width="473" height="117" alt="Fåfängans Antik" />
+    </a>
+
+    <nav class="desktop-nav" aria-label="Huvudnavigation">
+      {navigation.map((item) => <a href={item.href}>{item.label}</a>)}
+    </nav>
+
+    <a class="header-contact" href="#kontakt">Kontakt</a>
+
+    <details class="mobile-menu">
+      <summary aria-label="Öppna meny"><span></span><span></span></summary>
+      <nav aria-label="Mobilnavigation">
+        {navigation.map((item) => (
+          <a href={item.href}>{item.label}</a>
+        ))}
+        <a href="#kontakt">Kontakt</a>
+      </nav>
+    </details>
+  </div>
+</header>
+
+<script>
+  document.querySelectorAll('.mobile-menu a').forEach((link) => {
+    link.addEventListener('click', () => link.closest('details')?.removeAttribute('open'));
+  });
+</script>

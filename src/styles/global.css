@@ -69,7 +69,7 @@ button, summary, a { -webkit-tap-highlight-color: transparent; }
 .eyebrow { display: flex; justify-content: center; align-items: center; gap: 1rem; margin-bottom: clamp(2.5rem, 4vw, 4rem); font-size: .66rem; font-weight: 700; letter-spacing: .2em; text-transform: uppercase; }
 .hero-logo { width: min(72vw, 700px); margin-inline: auto; }
 .hero-lead { margin: clamp(2rem, 3.5vw, 3rem) auto 1.5rem; font: clamp(1.15rem, 1.8vw, 1.45rem)/1.5 var(--serif); }
-.text-link { display: inline-flex; align-items: center; padding: .8rem 1.1rem; border: 1px solid rgba(255,255,255,.75); font-size: .7rem; font-weight: 700; letter-spacing: .14em; text-transform: uppercase; transition: background .2s, color .2s; }
+.text-link { display: inline-flex; align-items: center; padding: .8rem 1.1rem; border: 1px solid rgba(255,255,255,.75); border-radius: 3px; font-size: .7rem; font-weight: 700; letter-spacing: .14em; text-transform: uppercase; transition: background .2s, color .2s; }
 .text-link:hover { background: white; color: var(--ink); }
 
 .instagram-section { padding-block: clamp(4rem, 5vw, 5rem); background: var(--paper-deep); }
@@ -119,7 +119,7 @@ button, summary, a { -webkit-tap-highlight-color: transparent; }
 .assortment-image img { width: 100%; height: 100%; object-fit: cover; }
 .assortment-image h3 { position: absolute; z-index: 1; left: clamp(1.25rem, 3vw, 2.5rem); right: 1.25rem; bottom: clamp(1.25rem, 3vw, 2.25rem); margin: 0; color: #fff; font: normal clamp(2rem, 3.4vw, 3.5rem)/1.05 var(--serif); letter-spacing: -.025em; text-shadow: 0 1px 12px rgba(0,0,0,.32); }
 .assortment-copy p { max-width: 32rem; margin: 0; color: #d8ccc1; font-size: 1.02rem; line-height: 1.75; }
-.assortment-link { display: inline-flex; align-items: center; margin-top: 1.6rem; padding: .68rem 1rem; border: 1px solid rgba(244,239,229,.58); color: var(--paper); font-size: .68rem; font-weight: 700; letter-spacing: .14em; text-transform: uppercase; transition: background .2s, color .2s, border-color .2s; }
+.assortment-link { display: inline-flex; align-items: center; margin-top: 1.6rem; padding: .68rem 1rem; border: 1px solid rgba(244,239,229,.58); border-radius: 3px; color: var(--paper); font-size: .68rem; font-weight: 700; letter-spacing: .14em; text-transform: uppercase; transition: background .2s, color .2s, border-color .2s; }
 .assortment-link:hover { background: var(--paper); border-color: var(--paper); color: var(--wine); }
 
 .history h2, .visit h2 { margin-bottom: clamp(2rem, 3vw, 3rem); font: normal clamp(2.7rem, 4.5vw, 4.6rem)/1.02 var(--serif); letter-spacing: -.035em; }

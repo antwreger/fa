@@ -74,7 +74,7 @@ button, summary, a { -webkit-tap-highlight-color: transparent; }
 
 .instagram-section { padding-block: clamp(4rem, 5vw, 5rem); background: var(--paper-deep); }
 .instagram-heading { width: min(calc(100% - clamp(3rem, 5vw, 4rem)), 1500px); display: flex; justify-content: space-between; align-items: end; gap: 2rem; margin-bottom: 2rem; }
-.instagram-heading h2 { margin: 0; font: normal clamp(1.75rem, 2.8vw, 2.7rem)/1.05 var(--serif); letter-spacing: -.025em; }
+.instagram-heading h2 { margin: 0; font: normal clamp(2.6rem, 4vw, 4rem)/1.02 var(--serif); letter-spacing: -.035em; }
 .instagram-heading > a { width: 2rem; height: 2rem; display: grid; place-items: center; transition: opacity .2s ease; }
 .instagram-heading > a:hover { opacity: .62; }
 .instagram-heading > a svg { width: 1.65rem; height: 1.65rem; fill: none; stroke: currentColor; stroke-width: 1.5; }
@@ -257,7 +257,7 @@ button, summary, a { -webkit-tap-highlight-color: transparent; }
   .visit-hours { order: 2; }
   .visit-contact { order: 3; }
   .detail-label { margin-bottom: .8rem; }
-  .history h2, .visit h2 { font-size: clamp(2.35rem, 10.25vw, 2.75rem); }
+  .instagram-heading h2, .history h2, .visit h2 { font-size: clamp(2.35rem, 10.25vw, 2.75rem); }
   .footer-bottom { grid-template-columns: 1fr; justify-items: center; gap: .7rem; text-align: center; }
   .footer-bottom > :last-child { justify-self: center; }
   .site-footer { padding-bottom: calc(1.5rem + env(safe-area-inset-bottom, 0px)); }

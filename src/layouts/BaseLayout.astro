@@ -30,7 +30,7 @@ const structuredData = {
 <html lang="sv">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
     <meta name="description" content={site.description} />
     <meta name="theme-color" content="#f2efe8" />
     <link rel="canonical" href={canonical} />
@@ -48,5 +48,17 @@ const structuredData = {
   <body>
     <a class="skip-link" href="#main">Hoppa till innehåll</a>
     <slot />
+    <script>
+      const themeColor = document.querySelector<HTMLMetaElement>('meta[name="theme-color"]');
+      const footer = document.querySelector('.site-footer');
+
+      if (themeColor && footer) {
+        const observer = new IntersectionObserver(([entry]) => {
+          themeColor.content = entry?.isIntersecting ? '#482a30' : '#f2efe8';
+        });
+
+        observer.observe(footer);
+      }
+    </script>
   </body>
 </html>

@@ -156,10 +156,12 @@ button, summary, a { -webkit-tap-highlight-color: transparent; }
 .visit-body { padding-top: 2rem; }
 .visit-details { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: clamp(3rem, 8vw, 8rem); font-size: 1.02rem; }
 .visit-group { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: clamp(2rem, 4vw, 4rem); }
+.visit-contact-group { grid-template-columns: 1fr; }
 .detail-label { margin-bottom: 1.1rem; color: var(--muted); }
 .visit-details p, .visit-details a { margin-bottom: .25rem; }
 .visit-details a { display: block; width: fit-content; border-bottom: 1px solid rgba(48,36,31,.3); }
 .visit-details a:hover { border-color: currentColor; }
+.visit-address .map-link { margin-top: .9rem; }
 .visit-follow-label { margin-top: 1.25rem; margin-bottom: .75rem; }
 .hours-row { display: flex; justify-content: flex-start; gap: 1.25rem; }
 .hours-row span:first-child { min-width: 8rem; }
@@ -253,8 +255,7 @@ button, summary, a { -webkit-tap-highlight-color: transparent; }
   .visit-group { grid-template-columns: 1fr; gap: 1.65rem; }
   .visit-address { order: 1; }
   .visit-hours { order: 2; }
-  .visit-map { order: 3; }
-  .visit-contact { order: 4; }
+  .visit-contact { order: 3; }
   .detail-label { margin-bottom: .8rem; }
   .history h2, .visit h2 { font-size: clamp(2.35rem, 10.25vw, 2.75rem); }
   .footer-bottom { grid-template-columns: 1fr; justify-items: center; gap: .7rem; text-align: center; }

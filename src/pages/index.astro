@@ -101,6 +101,7 @@ const instagramPosts = await getInstagramPosts(13);
               <div class="visit-address">
                 <p class="detail-label">Adress</p>
                 <p>{site.name}<br />{site.address.street}<br />{site.address.postal}</p>
+                <a class="map-link" href={site.map} target="_blank" rel="noreferrer">Visa på karta</a>
               </div>
               <div class="visit-hours">
                 <p class="detail-label">Öppettider</p>
@@ -108,11 +109,7 @@ const instagramPosts = await getInstagramPosts(13);
                 <small>Söndag stängt</small>
               </div>
             </div>
-            <div class="visit-group">
-              <div class="visit-map">
-                <p class="detail-label">Hitta hit</p>
-                <a class="map-link" href={site.map} target="_blank" rel="noreferrer">Visa på karta</a>
-              </div>
+            <div class="visit-group visit-contact-group">
               <div id="kontakt" class="visit-contact">
                 <p class="detail-label">Kontakt</p>
                 <a href={site.phone.landlineHref}>{site.phone.landline}</a>

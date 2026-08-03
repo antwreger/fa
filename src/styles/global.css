@@ -168,7 +168,7 @@ button, summary, a { -webkit-tap-highlight-color: transparent; }
     min-height: 100lvh;
     padding-top: 3.5rem;
   }
-  .eyebrow { margin-bottom: 3.25rem; }
+  .eyebrow { margin-bottom: 2.5rem; }
   .hero-logo { width: min(83vw, 560px); }
   .hero-lead { font-size: 1.15rem; }
   .instagram-grid { width: min(100% - (var(--pad) * 2), var(--max)); grid-template-columns: repeat(8, 1fr); grid-template-rows: repeat(11, 1fr); aspect-ratio: 1 / 1; }

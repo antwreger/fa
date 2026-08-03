@@ -23,7 +23,6 @@ export const site = {
 } as const;
 
 export const navigation = [
-  { label: 'Sortiment', href: '#sortiment' },
   { label: 'Antikviteter', href: '#antikviteter' },
   { label: 'Smycken', href: '#antika-smycken' },
   { label: 'Bijoux', href: '#vintage-bijoux' },

@@ -1,12 +1,13 @@
 ---
 import { site } from '../data/site';
+import { withBase } from '../lib/paths';
 const year = new Date().getFullYear();
 ---
 
 <footer class="site-footer">
   <div class="container footer-top">
     <a href="#top" class="footer-brand" aria-label="Till sidans början">
-      <img src="/fa-logotyp-white.svg" width="473" height="117" alt="Fåfängans Antik" />
+      <img src={withBase('/fa-logotyp-white.svg')} width="473" height="117" alt="Fåfängans Antik" />
     </a>
   </div>
   <div class="container footer-bottom">

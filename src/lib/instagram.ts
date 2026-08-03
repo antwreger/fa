@@ -1,4 +1,5 @@
 import { site } from '../data/site';
+import { withBase } from './paths';
 
 export type InstagramTile = {
   id: string;
@@ -26,19 +27,19 @@ type InstagramResponse = {
 };
 
 export const fallbackInstagramPosts: InstagramTile[] = [
-  { id: 'local-1', href: site.instagram.href, src: '/dsc_0176-scaled.jpg', alt: 'Antika föremål i butiken', width: 1920, height: 1280 },
-  { id: 'local-2', href: site.instagram.href, src: '/dsc_0150-scaled.jpg', alt: 'Färgrika vintagehalsband', width: 1920, height: 1280 },
-  { id: 'local-3', href: site.instagram.href, src: '/dsc_0195-scaled.jpg', alt: 'Vintagebijouterier från Christian Dior', width: 1920, height: 1280 },
-  { id: 'local-4', href: site.instagram.href, src: '/dsc_0101-1-scaled.jpg', alt: 'Smycken och äldre accessoarer', width: 1920, height: 1280 },
-  { id: 'local-5', href: site.instagram.href, src: '/dsc_0195-scaled.jpg', alt: 'Pärlor och vintagebijouterier', width: 1920, height: 1280 },
-  { id: 'local-6', href: site.instagram.href, src: '/dsc_0101-1-scaled.jpg', alt: 'Äldre ringar och smycken', width: 1920, height: 1280 },
-  { id: 'local-7', href: site.instagram.href, src: '/dsc_0176-scaled.jpg', alt: 'Detalj från butikens antika sortiment', width: 1920, height: 1280 },
-  { id: 'local-8', href: site.instagram.href, src: '/dsc_0150-scaled.jpg', alt: 'Vintagehalsband i varma toner', width: 1920, height: 1280 },
-  { id: 'local-9', href: site.instagram.href, src: '/dsc_0110-scaled.jpg', alt: 'Strassdiadem bland antika föremål', width: 2560, height: 1707 },
-  { id: 'local-10', href: site.instagram.href, src: '/dsc_0168-scaled.jpg', alt: 'Antik ring med pärla', width: 2560, height: 1707 },
-  { id: 'local-11', href: site.instagram.href, src: '/dsc_0166-scaled.jpg', alt: 'Äldre skyltdocka med diadem', width: 2560, height: 1916 },
-  { id: 'local-12', href: site.instagram.href, src: '/dsc_0205-scaled.jpg', alt: 'Detalj av äldre porslin', width: 2560, height: 1707 },
-  { id: 'local-13', href: site.instagram.href, src: '/dsc_0221-scaled.jpg', alt: 'Etikett på äldre whiskyflaska', width: 2560, height: 1707 },
+  { id: 'local-1', href: site.instagram.href, src: withBase('/dsc_0176-scaled.jpg'), alt: 'Antika föremål i butiken', width: 1920, height: 1280 },
+  { id: 'local-2', href: site.instagram.href, src: withBase('/dsc_0150-scaled.jpg'), alt: 'Färgrika vintagehalsband', width: 1920, height: 1280 },
+  { id: 'local-3', href: site.instagram.href, src: withBase('/dsc_0195-scaled.jpg'), alt: 'Vintagebijouterier från Christian Dior', width: 1920, height: 1280 },
+  { id: 'local-4', href: site.instagram.href, src: withBase('/dsc_0101-1-scaled.jpg'), alt: 'Smycken och äldre accessoarer', width: 1920, height: 1280 },
+  { id: 'local-5', href: site.instagram.href, src: withBase('/dsc_0195-scaled.jpg'), alt: 'Pärlor och vintagebijouterier', width: 1920, height: 1280 },
+  { id: 'local-6', href: site.instagram.href, src: withBase('/dsc_0101-1-scaled.jpg'), alt: 'Äldre ringar och smycken', width: 1920, height: 1280 },
+  { id: 'local-7', href: site.instagram.href, src: withBase('/dsc_0176-scaled.jpg'), alt: 'Detalj från butikens antika sortiment', width: 1920, height: 1280 },
+  { id: 'local-8', href: site.instagram.href, src: withBase('/dsc_0150-scaled.jpg'), alt: 'Vintagehalsband i varma toner', width: 1920, height: 1280 },
+  { id: 'local-9', href: site.instagram.href, src: withBase('/dsc_0110-scaled.jpg'), alt: 'Strassdiadem bland antika föremål', width: 2560, height: 1707 },
+  { id: 'local-10', href: site.instagram.href, src: withBase('/dsc_0168-scaled.jpg'), alt: 'Antik ring med pärla', width: 2560, height: 1707 },
+  { id: 'local-11', href: site.instagram.href, src: withBase('/dsc_0166-scaled.jpg'), alt: 'Äldre skyltdocka med diadem', width: 2560, height: 1916 },
+  { id: 'local-12', href: site.instagram.href, src: withBase('/dsc_0205-scaled.jpg'), alt: 'Detalj av äldre porslin', width: 2560, height: 1707 },
+  { id: 'local-13', href: site.instagram.href, src: withBase('/dsc_0221-scaled.jpg'), alt: 'Etikett på äldre whiskyflaska', width: 2560, height: 1707 },
 ];
 
 function captionToAlt(caption?: string) {

@@ -1,6 +1,7 @@
 ---
 import '../styles/global.css';
 import { site } from '../data/site';
+import { withBase } from '../lib/paths';
 
 interface Props {
   title?: string;
@@ -33,13 +34,13 @@ const structuredData = {
     <meta name="description" content={site.description} />
     <meta name="theme-color" content="#f2efe8" />
     <link rel="canonical" href={canonical} />
-    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <link rel="icon" href={withBase('/favicon.svg')} type="image/svg+xml" />
     <meta property="og:type" content="website" />
     <meta property="og:locale" content="sv_SE" />
     <meta property="og:title" content={title} />
     <meta property="og:description" content={site.description} />
     <meta property="og:url" content={canonical} />
-    <meta property="og:image" content={new URL('/og.svg', Astro.site)} />
+    <meta property="og:image" content={new URL(withBase('/og.svg'), Astro.site)} />
     <meta name="twitter:card" content="summary_large_image" />
     <title>{title}</title>
     <script is:inline type="application/ld+json" set:html={JSON.stringify(structuredData)} />

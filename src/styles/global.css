@@ -123,7 +123,7 @@ button, summary, a { -webkit-tap-highlight-color: transparent; }
 
 .history h2, .visit h2 { margin-bottom: clamp(2rem, 3vw, 3rem); font: normal clamp(2.7rem, 4.5vw, 4.6rem)/1.02 var(--serif); letter-spacing: -.035em; }
 
-.history { padding-block: clamp(4.75rem, 6.5vw, 6.5rem); background-image: linear-gradient(rgba(244,239,229,.88), rgba(244,239,229,.88)), url('/dsc_0101-1-scaled.jpg'); background-size: cover; background-position: 64% center; }
+.history { padding-block: clamp(4.75rem, 6.5vw, 6.5rem); background-image: linear-gradient(rgba(244,239,229,.88), rgba(244,239,229,.88)), var(--history-image); background-size: cover; background-position: 64% center; }
 .history-grid { display: block; }
 .history-copy { max-width: 720px; margin-left: clamp(0rem, 4vw, 3.5rem); }
 .history-copy > p { color: #514a44; font-size: 1rem; line-height: 1.75; }

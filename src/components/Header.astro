@@ -1,11 +1,12 @@
 ---
 import { navigation } from '../data/site';
+import { withBase } from '../lib/paths';
 ---
 
 <header class="site-header">
   <div class="container header-inner">
     <a class="brand" href="#top" aria-label="Fåfängans Antik – till sidans början">
-      <img src="/fa-logotyp.svg" width="473" height="117" alt="Fåfängans Antik" />
+      <img src={withBase('/fa-logotyp.svg')} width="473" height="117" alt="Fåfängans Antik" />
     </a>
 
     <nav class="desktop-nav" aria-label="Huvudnavigation">

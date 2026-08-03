@@ -127,4 +127,21 @@ const instagramPosts = await getInstagramPosts(13);
     </section>
   </main>
   <Footer />
+  <script>
+    const assortmentItems = document.querySelectorAll<HTMLElement>('.assortment-item');
+
+    if ('IntersectionObserver' in window) {
+      assortmentItems.forEach((item) => item.classList.add('reveal-ready'));
+
+      const revealObserver = new IntersectionObserver((entries, observer) => {
+        entries.forEach((entry) => {
+          if (!entry.isIntersecting) return;
+          entry.target.classList.add('is-visible');
+          observer.unobserve(entry.target);
+        });
+      }, { threshold: 0.18, rootMargin: '0px 0px -8% 0px' });
+
+      assortmentItems.forEach((item) => revealObserver.observe(item));
+    }
+  </script>
 </BaseLayout>

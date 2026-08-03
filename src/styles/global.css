@@ -175,6 +175,10 @@ button, summary, a { -webkit-tap-highlight-color: transparent; }
 .footer-bottom > :last-child { justify-self: end; }
 .footer-bottom p { margin: 0; }
 
+@media (min-width: 801px) {
+  .header-inner { width: calc(100% - 4rem); }
+}
+
 @media (max-width: 800px) {
   html { scroll-padding-top: 5.25rem; }
   .site-header { position: sticky; padding-top: env(safe-area-inset-top, 0px); }

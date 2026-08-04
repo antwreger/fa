@@ -220,7 +220,6 @@ button, summary, a { -webkit-tap-highlight-color: transparent; }
   .hero-inner { transform: translateY(-2rem); }
   .eyebrow { gap: .7rem; font-size: .56rem; }
   .hero-logo { width: 86vw; }
-  .hero-lead br { display: none; }
   .instagram-heading { align-items: center; flex-direction: row; gap: 1rem; }
   .instagram-section { padding-block: 3.5rem; }
   .instagram-heading { margin-bottom: 1.5rem; }
